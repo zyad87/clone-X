@@ -1,0 +1,29 @@
+/* CSS file to define scrollbar styling */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .scrollbar-custom {
+    scrollbar-width: thin;
+    scrollbar-color: theme('colors.dim.200') theme('colors.dim.900');
+  }
+
+  .scrollbar-custom::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-track {
+    background: theme('colors.dim.900');
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-thumb {
+    background-color: theme('colors.dim.200');
+    border-radius: 50%;
+    border: 2px solid theme('colors.dim.900');
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-thumb:hover {
+    background-color: theme('colors.primary');
+  }
+}
